@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="log.jpeg">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            gap: 6rem;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D7C097;
+        }
+        header{
+            display: flex;
+            padding: 14px 50px;
+            background-color: #E7DEAF;
+            align-items: center;
+            border-bottom: 2px solid black;
+            justify-content: space-between;
+            top: 0;
+            position: sticky;
+        }
+        .logo{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        nav{
+            display: flex;
+            gap: 2rem;
+        }
+        nav a{
+            color: black;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+        nav a li{
+            list-style: none;
+            font-size: 1.1rem;
+            transition: 1s;
+        }
+        nav a li:hover{
+            color: #7E5E2A;
+        }
+        .bod{
+            gap: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .main{
+            margin: 19px 50px;
+            padding: 14px 50px;
+            background-image: url(hehe.jpg);
+            background-attachment: fixed;
+            gap: 3rem;
+        }
+        .main h1{
+            padding-top: 300px;
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .main .btn{
+            padding: 14px 50px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            border: none;
+            transition: 2s;
+            color: #7E5E2A;
+        }
+        .main .btn:hover{
+            background-color: #7E5E2A;
+            color: white;
+            cursor: pointer;
+        }
+        .kitchen{
+            display: flex;
+            margin: 19px 50px;
+            gap: 2rem;
+        }
+        .kitchen .pht{
+            background-image: url(kitchen.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+            padding: 300px 250px;
+        }
+
+        .kitchen .pht h2{
+            opacity: 0;
+        }
+        .kitchen .text{
+            width: 50%;
+            padding-top: 170px;
+            padding-left: 80px;
+            padding-right: 30px;
+            height: 500px;
+        }
+        .kitchen .text h1{
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        .kitchen .text p{
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            text-align: justify;
+        }
+        .kitchen .text .btn{
+            padding: 14px 50px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: none;
+            transition: 2s;
+            color: #7E5E2A;
+        }
+        .kitchen .text .btn:hover{
+            background-color: #7E5E2A;
+            color: white;
+            cursor: pointer;
+        }
+        .big{
+            margin-top: 50px;
+            padding: 14px 50px;
+            text-align: center;
+        }
+        .big h1{
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }   
+        .boxes{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .box{
+            width: 23%;
+            padding: 14px 50px;
+        }
+        .box h2{
+            color: #505f69;
+        }
+        .box p{
+            text-align: justify;
+            line-height: 1.5rem;
+        }
+        .part{
+            margin: 0;
+            padding: 0;
+            background-color: #f8e3bf;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        .phase{
+            padding: 14px 50px;
+            margin-top: 100px;
+            padding-top: 150px;
+            text-align: center;
+            
+        }
+        .phase h1{
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .container{
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            padding: 14px 50px;
+            color: white;
+        }
+        .container1{
+            background-image: url(wokitch.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+            padding: 250px 150px;
+            width: 25%;
+        }
+        .container2{
+            background-image: url(baath.webp);
+            background-attachment: fixed;
+            background-size: contain;
+            padding: 250px 150px;
+            width: 25%;
+        }
+        .container3{
+            background-image: url(in.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+            padding: 250px 150px;
+            width: 25%;
+        }
+        .phase .btn{
+            padding: 14px 50px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: none;
+            transition: 2s;
+            color: #30281c;
+            margin-top: 100px;
+            background-color: thistle;
+            margin-bottom: 100px;
+        }
+        .phase .btn:hover{
+            color: thistle;
+            background-color: #30281c;
+            cursor: pointer;;
+        }
+        .again{
+            padding: 14px 50px;
+            padding-top: 100px;
+        }
+        .again h1{
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .infos{
+            display: flex;
+            justify-content: center;
+        }
+        .info{
+            width: 30%;
+            padding: 14px 50px;
+            border-radius: 20px;
+            text-align: center;
+        }
+         .info i{
+            font-size: 5rem;
+        }
+        .info p{
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+            text-align: justify;
+        }
+        .info h2{
+            margin-top: 1rem;
+            font-size: 2rem;
+            color: #7E5E2A;
+            margin-bottom: 100px;
+        }
+        .det{
+            display: flex;
+            padding: 14px 80px;
+            padding-top: 100px;
+            background-color: black;
+            color: white;
+        }
+        .word{
+            width: 50%;
+        }
+        .word h1{
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .word h3{
+            font-size: 1.3rem;
+            line-height: 3rem;
+            
+        }
+        .word h2{
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+        .word p{
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+        form{
+            width: 50%;
+        }
+        .name{
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .name label{
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .name input{
+            width: 50%;
+            padding: 10px;
+            font-size: 1rem;
+            border-top: none;
+            border: none;
+            background-color: black;
+            color: white;
+            border-bottom: white 2px solid;
+        }
+        .fname, .lname{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="log.jpeg" alt="logo" width="50" height="50">
+            <h2>R&R Remodeling</h2>
+        </div>
+        <nav>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>Services</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Work</li></a>
+            <a href=""><li>Contact</li></a>
+            <a href=""><li><i class='bx bx-phone'></i>9818343979</li></a>
+        </nav>
+    </header>
+    <div class="bod">
+        <div class="main">
+        <h1>Exceptional Home
+            <br>Remodeling &
+            <br>Renovation
+        </h1>
+        <button class="btn">Get A Free Estimate</button>
+        </div>
+        <div class="kitchen">
+            <div class="pht">
+                <h2>Kitchen</h2>
+            </div>
+            <div class="text">
+            <h1>The Leading Bay Area Remodeling Company</h1>
+            <p>Kitchen design is a timeless and elegant choice that combines natural beauty with functionality. It uses wood as the primary material for cabinets, shelves, countertops, or decorative elements, creating a warm and welcoming kitchen environment. This design appeals to customers who value durability, comfort, and a classic yet modern appearance.</p>
+            <button class="btn">More About us</button>
+            </div>
+        </div>
+    </div>
+    <div class="big">
+        <h1>WHY CHOOSE US</h1>
+        <div class="boxes">
+            <div class="box">
+                <h2>Easy
+                    <br>Financing
+                </h2>
+                <br>
+                <p>Easy financing offered by a remodeling company helps homeowners 
+                    upgrade their spaces without the burden of large upfront costs.</p>
+            </div>
+            <div class="box">
+                <h2>Free,At Home
+                    <br>Consultation
+                </h2>
+                <br>
+                <p>A free, at-home consultation allows homeowners to discuss their remodeling
+                     needs with professionals in the comfort of their own space.</p>
+            </div>
+            <div class="box">
+                <h2>Award Winning
+                    <br>Services
+                </h2>
+                <br>
+                <p>Award-winning remodeling services signify a company's excellence and 
+                    commitment to quality in home renovation projects.</p> 
+            </div>
+            <div class="box">
+                <h2>Licensed & 
+                    <br>Insured
+                </h2>
+                <br>
+                <p>Licensed and insured remodeling companies provide homeowners with 
+                    confidence and protection during renovation projects.</p>
+            </div>
+        </div>
+    </div>
+    <div class="part">
+        <div class="phase">
+            <h1>Our Service Includes</h1>
+            <div class="container">
+                <div class="container1">
+                    <h2>Kitchen</h2>
+                </div>
+                <div class="container2">
+                    <h2>Bathroom</h2>
+                </div>
+                <div class="container3">
+                    <h2>Interior</h2>
+                </div>
+            </div>
+            <button class="btn">See All Services</button>
+        </div>
+    </div>
+    <div class="again">
+        <h1>Satisfied Customers</h1>
+        <div class="infos">
+            <div class="info">
+                <i class='bx bxs-quote-alt-right'></i>
+                <p>The remodeling team did an amazing job on our kitchen. 
+                    The work was completed on time, the quality was excellent,
+                     and the crew was very respectful of our home. Their easy 
+                     financing options made it affordable for us to start right away. 
+                     We’re extremely happy with the results.</p>
+                    <br>
+                <h2>Dave Reddington</h2>
+            </div>
+            <div class="info">
+                <i class='bx bxs-quote-alt-right'></i>
+                 <p>From consultation to completion, everything was smooth and professional. 
+                    They clearly explained the process, helped us choose the right design, and
+                    delivered exactly what they promised. The flexible payment plans were a big plus
+                    and made the remodeling experience stress-free.</p>
+                    <br>
+                    <h2>Amelia Banks</h2>
+            </div>
+            <div class="info">
+                <i class='bx bxs-quote-alt-right'></i>
+                <p>We couldn’t be more satisfied with our remodeling project. The craftsmanship was
+                    top-notch, and the team communicated with us at every step. Thanks to their easy
+                    financing, we were able to upgrade our home without financial pressure. Highly
+                    recommended!</p>
+                    <br>
+                    <h2>Kenny Stutes</h2>
+            </div>
+        </div>
+    </div>
+    <div class="det">
+        <div class="word">
+            <h1>Let's Discuss
+                <br>Your Next Project
+            </h1>
+            <br>
+            <h3>Fill out the form, or call us to
+                <br>set up a free in-home consultation.
+            </h3>
+            <br>
+            <h2>Service Areas:</h2>
+            <p>Lalitpur, Bhaktapur, Kathmandu</p>
+            <br>
+            <p>r&rremodeling334@gmail.com</p>
+            <br>
+            <p>+977 9763590277</p>
+        </div>
+        <form action="">
+            <div class="name">
+                <div class="fname">
+                    <label for="fname">First Name*</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="lname">
+                    <label for="lname">Last Name*</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
