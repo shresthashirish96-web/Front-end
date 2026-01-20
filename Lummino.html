@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lummino</title>
+    <link rel="icon" type="image/x-icon" href="lum.webp">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        background:  linear-gradient(to right, #050505, #472980, #feb47b);;
+    }
+    header{
+        display: flex;
+        padding: 20px 60px;
+        background: linear-gradient(to right, #3b3b3b, #472980, #e09c67);
+        justify-content: space-between;
+        border-bottom: 2px solid black;
+        align-items: center;
+    }
+    .logo{
+        display: flex;
+        gap: 1rem;
+    }
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin: 0 1.5rem;
+        transition: 0.5s;
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    nav a:hover,
+    nav a.active{
+        color: #8b83ff;
+    }
+    .btn{
+        padding: 0.6rem 1.5rem;
+        border-radius: 10px;
+        background: white;
+        color: black;
+        cursor: pointer;
+        border: none;
+        transition: 0.5s;
+        font-size: 1rem;
+    }
+    .btn:hover{
+        color: white;
+        background: #8b83ff;
+    }
+    .bod{
+        padding: 20px 60px;
+        font-size: 2rem;
+    }
+    .bod a{
+        color: black;
+        padding: 10px;
+        background-color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        display: flex;
+        width: fit-content;
+        gap: 1rem;
+        align-items: center;
+    }
+    .bod li{
+        padding-left: 20px;
+        font-weight: lighter;
+        font-size: 20px;
+        list-style: none;
+    }
+    .bod p{
+        margin-top: 4.5rem;
+        width: 40%;
+        font-size: 1.5rem;
+    }
+    .part{
+        background-color: white;
+        display: flex;
+        padding: 14px 50px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    } 
+    .text{
+        padding-top: 50px;
+        color: black;
+        padding: 50px 100px;
+        width: 45%;
+    }
+    .text h3{
+        font-size: 30px;
+    }
+    .text h2{
+        font-size: 50px;
+    }
+    .bod h1:hover{
+        color: pink;
+    }
+    .card-wrapper{
+        right: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        height: auto;
+    }
+    .card{
+        width: 100%;
+        background: #111;
+        color: #fff;
+        padding: 3rem;
+        border-radius: 25px;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 1s ease, opacity 0.5s;
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="lum.webp" alt="logo" height="80px" width="80px">
+            <h1>Lummino</h1>
+        </div>
+        <nav>
+            <a href="showpage('1')" class="active">Home</a>
+            <a href="showpage('2')">About</a>
+            <a href="showpage('3')">Solution</a>
+            <a href="showpage('4')">Contact</a>
+        </nav>
+        <button class="btn" onclick="showpage('4')">Contact</button>
+    </header>
+    <section id="1">
+        <div class="bod">
+            <h1>FUTURE-READY,
+            <br>SMART BANKING
+            </h1>
+            <a onclick="showpage('5')"><li>Get Started</li> <i class='bx bxs-right-arrow-circle'></i></a>
+            <p>This is a space to welcome visitors to the site.
+            Grab their attention with copy that clearly states
+            what the site is about.
+            </p>
+        </div>
+        <div class="part">
+            <div class="section">
+                <div class="text">
+                    <h3>FINANCIAL TOOLS</h3>
+                    <h2>Streamline Your Banking</h2>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card page1">
+                        <h2>01</h2>
+                        <div>
+                            <h3>Smart Savings</h3>
+                            <p>This is the page to introduce the service section. 
+                                Briefly describe the types of services offered and highlight 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
